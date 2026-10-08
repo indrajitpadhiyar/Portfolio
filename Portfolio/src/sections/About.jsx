@@ -90,7 +90,10 @@ const About = () => {
             >
               <p
                 className="text-2xl leading-relaxed text-[var(--text)] sm:text-3xl"
-                style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontStyle: "italic",
+                }}
               >
                 "The goal is not more effects. The goal is better rhythm,
                 clearer focus, and a visual identity strong enough to be
@@ -124,9 +127,8 @@ const About = () => {
               className="mt-10 grid grid-cols-3 gap-6 border-t border-[var(--line)] pt-8"
             >
               {[
-                { value: "02+", label: "Products shipped" },
-                { value: "06", label: "Core tools" },
-                { value: "∞", label: "Iterations" },
+                { value: "10+", label: "Products shipped" },
+                { value: "6", label: "Core tools" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p

@@ -5,41 +5,43 @@ import { FiArrowUpRight, FiGithub, FiX } from "react-icons/fi";
 const projects = [
   {
     id: 1,
-    title: "Bagify",
-    type: "MERN Commerce Experience",
-    image: "/bagify.png",
+    title: "IDR Tech",
+    badge: "Main Project",
+    isMain: true,
+    type: "Web Studio & Engineering Agency",
+    image: "/idrtech.png",
     description:
-      "A storefront experience built to feel fast, clear, and conversion-focused while staying modern and visually polished.",
+      "A high-performance digital web agency platform building custom UI, rapid full-stack applications, and conversion-ready systems.",
     detail:
-      "Bagify brings frontend presentation and backend practicality together. The build focuses on clean product discovery, structured browsing, and a responsive flow that can support real users.",
-    tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    link: "https://bagify-z9wj.onrender.com/",
-    github: "https://github.com/Indrajitpadhiyar/Bagify.git",
-  },
-  {
-    id: 2,
-    title: "Space Exploration",
-    type: "3D Immersive Website",
-    image: "/space.png",
-    description:
-      "A futuristic 3D space-themed website with immersive scroll animations, cinematic visuals, and interactive planet elements.",
-    detail:
-      "The Space Exploration 3D Website immerses users in a visually stunning space environment with smooth scroll animations, cinematic visuals, and interactive elements that bring the cosmos to life.",
-    tech: ["React", "GSAP", "Three.js", "Tailwind CSS"],
-    link: "https://space-4c4h.onrender.com/",
+      "IDR Tech delivers world-class web experiences engineered for real business growth. Built with performance-obsessed front-end design (<2s load times, 98+ score), bespoke UI layouts, smooth interactive animations, modern service showcases, and custom full-stack solutions.",
+    tech: ["React", "Node.js", "Tailwind CSS", "Framer Motion", "MongoDB", "High Performance"],
+    link: "https://idrtech.in",
     github: "https://github.com/Indrajitpadhiyar",
   },
   {
     id: 2,
+    title: "VANTA",
+    badge: "First Project",
+    type: "Next-Gen Streetwear & Lifestyle Storefront",
+    image: "/vanta.png",
+    description:
+      "An editorial streetwear e-commerce experience featuring interactive lookbooks, fluid product showcases, 3D branded intro, and dynamic cart flows.",
+    detail:
+      "VANTA merges modern streetwear aesthetics with cutting-edge front-end engineering. The platform features curated collection drops, editorial lookbook browsing, interactive 3D logo loader, custom bag management, and smooth micro-interactions tailored for high conversion.",
+    tech: ["React", "Tailwind CSS", "Framer Motion", "JavaScript", "Responsive Design"],
+    link: "https://vanta-rung.onrender.com/",
+    github: "https://github.com/Indrajitpadhiyar",
+  },
+  {
+    id: 3,
     title: "Fashion Shop",
+    badge: "2nd Project",
     type: "Luxury Fashion E-Commerce Website",
     image: "/fasion.png",
     description:
       "A modern fashion e-commerce platform featuring dedicated Men and Women collections, premium product showcases, smooth animations, and a visually engaging shopping experience.",
-
     detail:
-      "Fashion Shop is a premium fashion-focused website designed to showcase modern clothing collections with an elegant and immersive user experience. The platform features dedicated sections for men's and women's fashion, interactive hover effects, smooth transitions, high-quality imagery, and conversion-focused call-to-action elements. Built with performance and responsiveness in mind, the website delivers a seamless browsing experience across desktop, tablet, and mobile devices while maintaining a luxury brand identity.",
-
+      "Fashion Shop is a premium fashion-focused website designed to showcase modern clothing collections with an elegant and immersive user experience. The platform features dedicated sections for men's and women's fashion, interactive hover effects, smooth transitions, high-quality imagery, and conversion-focused call-to-action elements. Built with performance and responsiveness in mind across desktop, tablet, and mobile devices while maintaining a luxury brand identity.",
     tech: [
       "React",
       "Tailwind CSS",
@@ -47,7 +49,7 @@ const projects = [
       "JavaScript",
       "Responsive Design"
     ],
-    link: "https://fashion-s5r1.onrender.com",
+    link: "https://fashion-s5r1.onrender.com/",
     github: "https://github.com/Indrajitpadhiyar"
   }
 ];
@@ -210,6 +212,19 @@ const Projects = () => {
                   }`}
               >
                 <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    {project.badge && (
+                      <span
+                        className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${project.isMain
+                          ? "bg-orange-500/15 text-orange-600 dark:text-orange-400 border border-orange-500/30"
+                          : "bg-[var(--line)] text-[var(--text-secondary)] border border-[var(--line-strong)]"
+                          }`}
+                      >
+                        {project.isMain ? "★ " : ""}
+                        {project.badge}
+                      </span>
+                    )}
+                  </div>
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-muted)]">
                     {project.type}
                   </p>
@@ -233,13 +248,21 @@ const Projects = () => {
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="cta-pill cta-pill-black"
+                  >
+                    Live Preview
+                    <FiArrowUpRight />
+                  </a>
                   <button
                     type="button"
                     onClick={() => setSelectedProject(project)}
-                    className="cta-pill cta-pill-black"
+                    className="cta-pill cta-pill-outline"
                   >
-                    Open Project
-                    <FiArrowUpRight />
+                    Case Study
                   </button>
                   <a
                     href={project.github}

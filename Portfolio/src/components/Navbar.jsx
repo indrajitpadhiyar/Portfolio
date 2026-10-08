@@ -86,7 +86,7 @@ const Navbar = () => {
               className="text-[21px] font-extrabold tracking-tight text-[var(--text)] transition-colors duration-300 group-hover:text-[#ff8c00]"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Qurifolio
+              Indrajit
             </span>
           </button>
 
@@ -121,7 +121,11 @@ const Navbar = () => {
             className="cursor-hover-target relative z-[100] inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] lg:hidden"
             aria-label="Toggle menu"
           >
-            {menuOpen ? <FiX className="text-lg text-white" /> : <FiMenu className="text-lg" />}
+            {menuOpen ? (
+              <FiX className="text-lg text-white" />
+            ) : (
+              <FiMenu className="text-lg" />
+            )}
           </button>
         </div>
       </Motion.header>
