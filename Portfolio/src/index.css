@@ -262,6 +262,15 @@
   animation-play-state: paused;
 }
 
+@keyframes shiny-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.animate-shiny-shimmer {
+  animation: shiny-shimmer 4s linear infinite;
+}
+
 /* ───────────────── Custom Cursor ───────────────── */
 .cursor-dot {
   position: fixed;
@@ -273,7 +282,6 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: difference;
   transition: width 0.3s var(--ease-out-expo),
               height 0.3s var(--ease-out-expo),
               background 0.3s ease;
@@ -299,7 +307,11 @@
   width: 60px;
   height: 60px;
   background: var(--accent);
-  mix-blend-mode: normal;
+  mix-blend-mode: multiply;
+}
+
+.dark .cursor-hover .cursor-dot {
+  mix-blend-mode: screen;
 }
 
 .cursor-hover .cursor-ring {

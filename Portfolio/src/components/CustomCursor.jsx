@@ -95,7 +95,11 @@ const CustomCursor = () => {
           width: isHovering ? "60px" : "8px",
           height: isHovering ? "60px" : "8px",
           background: isHovering ? "var(--accent)" : "var(--black)",
-          mixBlendMode: isHovering ? "normal" : "difference",
+          mixBlendMode: isHovering
+            ? typeof document !== "undefined" && document.documentElement.classList.contains("dark")
+              ? "screen"
+              : "multiply"
+            : "normal",
           marginLeft: isHovering ? "-26px" : "0",
           marginTop: isHovering ? "-26px" : "0",
         }}
