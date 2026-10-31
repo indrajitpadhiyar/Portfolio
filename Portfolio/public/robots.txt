@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://idrtech.in/sitemap.xml
+
