@@ -118,13 +118,13 @@ const Navbar = () => {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="cursor-hover-target relative z-[100] inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] lg:hidden"
+            className="cursor-hover-target relative z-[100] inline-flex h-11 w-11 items-center justify-center rounded-xl bg-black text-white shadow-md lg:hidden transition-transform active:scale-95"
             aria-label="Toggle menu"
           >
             {menuOpen ? (
-              <FiX className="text-lg text-white" />
+              <FiX className="text-xl text-white" />
             ) : (
-              <FiMenu className="text-lg" />
+              <FiMenu className="text-xl text-white" />
             )}
           </button>
         </div>

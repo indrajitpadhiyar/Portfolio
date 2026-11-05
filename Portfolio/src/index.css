@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap");
 @import "tailwindcss";
 
 /* ───────────────── Design Tokens ───────────────── */
@@ -454,10 +454,10 @@
 
 @media (max-width: 640px) {
   .hero-text-line {
-    font-size: clamp(2.8rem, 16vw, 5rem);
-    line-height: 1;
-    white-space: normal;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.1rem, 10.8vw, 3.6rem);
+    line-height: 0.94;
+    white-space: nowrap;
+    letter-spacing: -0.04em;
   }
 }
 
